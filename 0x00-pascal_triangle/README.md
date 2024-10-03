@@ -13,5 +13,4 @@ every column is the sum of the 2 columns above
   .............
  ...............
 
-sum of each row i = 2^i
-
+took me 5 minutes to clean my desk from the drawings XD
