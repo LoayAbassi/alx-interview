@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""contains a minoperations function."""
+"""contains a minoperations function"""
 
 
 def minOperations(n: int) -> int:
     """
-    Minoperation function.
-
     Args:
-        n (int): goal number
+        n (int): goal Hs
+
     Returns:
-        int: minimum operations
+        int: _description_
     """
     if n <= 1:
         return 0
-    current_length: int = 1
+
+    divisor: int = 2
+
     operations: int = 0
-    while current_length < n:
-        if n % current_length == 0:
-            operations += 1
-            current_length *= 2
-        else:
-            operations += 2
-            current_length += 1
+
+    while n > 1:
+        while n % divisor == 0:
+            operations += divisor
+            n //= divisor
+        divisor += 1
 
     return operations
