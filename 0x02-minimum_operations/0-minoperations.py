@@ -14,8 +14,7 @@ def minOperations(n):
     n 'H' characters.
 
     """
-    if n <= 1:
-        return 0
+
 
     divisor = 2
     operations = 0
