@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """contains a minoperations function"""
-def minOperations(n:int)->int:
+
+
+def minOperations(n: int) -> int:
     """
     Args:
         n (int): goal 'H's number
@@ -10,9 +12,9 @@ def minOperations(n:int)->int:
     if n <= 1:
         return 0
 
-    divisor:int = 2
+    divisor: int = 2
 
-    operations:int = 0
+    operations: int = 0
 
     while n > 1:
         while n % divisor == 0:
