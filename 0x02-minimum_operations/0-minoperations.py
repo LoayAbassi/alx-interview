@@ -18,7 +18,7 @@ def minOperations(n: int) -> int:
 
     while root <= n:
         if n % root == 0:
-            ops += root
+            operations += root
             n = n / root
             root -= 1
         root += 1
