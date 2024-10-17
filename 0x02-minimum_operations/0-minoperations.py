@@ -1,31 +1,23 @@
 #!/usr/bin/env python3
-"""Contains a minOperations function"""
+"""contains a minoperations function."""
+
 
 def minOperations(n: int) -> int:
     """
+    Minoperation function.
+
     Args:
-        n (int): goal 'H's number
+        n (int): goal number
     Returns:
-        int: minimum operations to reach n
+        int: minimum operations
     """
     if n <= 1:
         return 0
-
-    operations = 0
-    divisor = 2
-
-    # Loop until n becomes 1
+    divisor: int = 2
+    operations: int = 0
     while n > 1:
-        # Check if divisor can divide n
         while n % divisor == 0:
-            operations += divisor  # Add the divisor to operations
-            n //= divisor  # Reduce n
-        divisor += 1  # Move to the next potential divisor
-
-        # Optimization: Stop if divisor exceeds sqrt(n)
-        if divisor * divisor > n:
-            if n > 1:  # If n is still greater than 1, it is prime
-                operations += n  # Add n itself as an operation
-            break
-
+            operations += divisor
+            n //= divisor
+        divisor += 1
     return operations
