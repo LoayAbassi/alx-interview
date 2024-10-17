@@ -15,14 +15,13 @@ def minOperations(n):
 
     """
 
-
-    divisor = 2
     operations = 0
+    divisor = 2
 
     while n > 1:
-        while n % divisor == 0:
+        while not (n % divisor):
             operations += divisor
-            n //= divisor
+            n /= divisor
         divisor += 1
 
     return operations
