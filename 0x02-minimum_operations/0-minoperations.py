@@ -7,7 +7,7 @@ in exactly n 'H' characters.
 """
 
 
-def minOperations(n):
+def minOperations(n: int) -> int:
     """
     Calculate the minimum number of 
     operations needed to result in exactly
@@ -18,8 +18,8 @@ def minOperations(n):
     if n <= 1:
         return 0
 
-    divisor = 2
-    operations = 0
+    divisor: int = 2
+    operations: int = 0
 
     while n > 1:
         while n % divisor == 0:
