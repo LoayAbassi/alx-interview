@@ -2,7 +2,7 @@
 """contains a minoperations function"""
 
 
-def minOperations(n: int) -> int:
+def minOperations(n):
     """
     Args:
         n (int): goal Hs
@@ -13,9 +13,9 @@ def minOperations(n: int) -> int:
     if n <= 1:
         return 0
 
-    divisor: int = 2
+    divisor= 2
 
-    operations: int = 0
+    operations= 0
 
     while n > 1:
         if n % divisor == 0:
