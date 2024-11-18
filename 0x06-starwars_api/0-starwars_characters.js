@@ -32,12 +32,15 @@ function fetchName (url) {
   });
 }
 
-fetchFilm(id).then(list => {
-  for (const url of list) {
-    fetchName(url).then(actorName => {
-      console.log(actorName);
-    });
+async function printName () {
+  try {
+    const list = await fetchFilm(id);
+    for (const url of list) {
+      const charName = await fetchName(url);
+      console.log(charName);
+    }
+  } catch (error) {
+    console.log(error);
   }
-}).catch(error => {
-  console.log(error);
-});
+}
+printName();
