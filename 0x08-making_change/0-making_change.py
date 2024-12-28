@@ -7,7 +7,7 @@ contains makechange function
 def makeChange(coins, total):
     """
     Args:
-        coins, total 
+        coins, total
     """
     if total <= 0:
         return 0
